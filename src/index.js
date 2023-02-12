@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import './01-base/01-class'
-import App from './01-base/01-class';
+// import App from './01-base/01-class';
+import App from './01-base/03-组件嵌套'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
