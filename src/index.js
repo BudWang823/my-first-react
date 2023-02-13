@@ -7,7 +7,8 @@ import ReactDOM from 'react-dom/client';
 // import App from './01-base/05-事件处理-1'
 // import App from './01-base/05-事件处理-2'
 // import App from './01-base/06-ref'
-import App from './01-base/07-todolist'
+// import App from './01-base/07-todolist'
+import App from './01-base/08-dangerouslySetInnerHTML'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
