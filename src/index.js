@@ -10,7 +10,8 @@ import './style/style.css'
 // import App from './01-base/06-ref'
 // import App from './01-base/07-todolist'
 // import App from './01-base/08-dangerouslySetInnerHTML'
-import App from './01-base/09-数据选项卡'
+// import App from './01-base/09-数据选项卡'
+import App from './01-base/10-setstate'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -3,7 +3,12 @@ import './css/09-数据选项卡.css'
 import Center from "./component/Center";
 import Cinemas from "./component/Cinemas";
 import Films from "./component/Films";
-
+import BetterScroll from 'better-scroll'
+console.log(BetterScroll)
+// let bs = new BetterScroll('.wrapper', {
+// 	movable: true,
+// 	zoom: true
+// })
 class App extends Component {
 	state = {
 		list: [
