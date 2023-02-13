@@ -11,7 +11,6 @@ export default class App extends Component {
 		console.log('handleClick3')
 	}
 	render() {
-		const class1 = {background: 'yellow', fontSize: '30px'}
 		return (
 			<div>
 				<input type="text"/>

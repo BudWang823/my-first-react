@@ -19,7 +19,6 @@ export default class App extends Component {
 		console.log(this.a)
 	}
 	render() {
-		const class1 = {background: 'yellow', fontSize: '30px'}
 		return (
 			<div>
 				<input type="text"/>
