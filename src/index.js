@@ -13,7 +13,9 @@ import './style/style.css'
 // import App from './01-base/09-数据选项卡'
 // import App from './01-base/10-setstate'
 // import App from './01-base/11-betterScroll'
-import App from './01-base/12-props'
+// import App from './01-base/12-props'
+// import App from './01-base/13-props-function'
+import App from './01-base/14-受控案例todolist'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

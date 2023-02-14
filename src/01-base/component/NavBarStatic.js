@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-
+import '../css/com-navbar.css'
 class NavBarStatic extends Component {
 	static propTypes = {
 		name: PropTypes.string,
@@ -9,16 +9,16 @@ class NavBarStatic extends Component {
 	};
 	static defaultProps = {
 		name: '默认name',
-		isShowLeft: true,
-		isShowRight: true
+		isShowLeft: false,
+		isShowRight: false
 	};
 	render() {
 		const {name,isShowLeft,isShowRight}  = this.props
 		return (
-			<div>
+			<div className="warpper">
 				<h2>
 					{isShowLeft && <button>left button</button>}
-					我是-{this.props.name}
+					<span>{name}</span>
 					{isShowRight && <button>right button</button>}
 				</h2>
 			</div>
