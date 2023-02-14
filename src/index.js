@@ -17,8 +17,9 @@ import './style/style.css'
 // import App from './01-base/13-props-function'
 // import App from './01-base/14-受控案例todolist'
 // import App from './01-base/15-父子通讯表单域组件'
-import App from './01-base/16-非父子通讯-发布订阅模式'
+// import App from './01-base/16-非父子通讯-发布订阅模式'
 // import App from './01-base/17-非父子组件通讯-context状态树'
+import App from './01-base/18-插槽'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
