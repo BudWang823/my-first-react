@@ -12,12 +12,13 @@ import './style/style.css'
 // import App from './01-base/08-dangerouslySetInnerHTML'
 // import App from './01-base/09-数据选项卡'
 // import App from './01-base/10-setstate'
-import App from './01-base/11-betterScroll'
+// import App from './01-base/11-betterScroll'
+import App from './01-base/12-props'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	// <React.StrictMode>
-		<App/>
+	<App/>
 	// </React.StrictMode>
 );
 
