@@ -1,32 +1,7 @@
 import React, {Component} from 'react';
+import {PublishSubscribe} from "../utils/utils";
 
-const bus = {
-	generatedId() {
-		return `${new Date().valueOf()}`
-	},
-	// 订阅
-	subscribe(event, callback) {
-		const id = this.generatedId()
-		if (!this.list[event]) {
-			this.list[event] = {}
-		}
-		this.list[event][id] = callback
-		return id
-	},
-	// 取消订阅
-	unSubscribe(event, id) {
-		delete this.list[event][id]
-		console.log(id, '取消订阅')
-	},
-	// 发布
-	publish(event, obj) {
-		Object.keys(this.list[event] || {}).forEach(item => {
-			this.list[event] && this.list[event][item] && this.list[event][item](obj)
-		})
-	},
-	list: {}
-
-}
+const bus = PublishSubscribe()
 
 class Child extends Component {
 	state = {
