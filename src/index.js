@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style/style.css'
-import App from './01-base/20-生命周期-案例'
+import App from './01-base/21-生命周期-案例2-拦截props'
+// import App from './01-base/20-生命周期-案例-拦截state'
 // import App from './01-base/19-生命周期'
 // import App from './01-base/18-插槽'
 // import App from './01-base/17-非父子组件通讯-context状态树'
