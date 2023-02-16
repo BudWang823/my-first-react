@@ -3,11 +3,16 @@ import React, { Component } from 'react'
 
 class Box extends Component {
 
+	UNSAFE_componentWillReceiveProps(nextProps) {
+		console.log('UNSAFE_componentWillReceiveProps')
+		console.log(this.props)
+		return false
+	}
 	shouldComponentUpdate(nextProps, nextState) {
+		console.log('shouldComponentUpdate')
 		return JSON.stringify(this.props) !== JSON.stringify(nextProps)
 	}
 	render() {
-		console.log('box render', this.props.index)
 		const style = {
 			width: '100px',
 			height: '100px',
@@ -33,14 +38,14 @@ class Box extends Component {
 
 export default class App extends Component {
 	state = {
-		list: ['01', '02', '03', '04', '05', '06', '07', '08', '09'],
+		list: ['01'],
+		// list: ['01', '02', '03', '04', '05', '06', '07', '08', '09'],
 		value: ''
 	}
 	render() {
 		return (
 			<div>
 				<input onChange={(e) => {
-					console.log(e.target.value)
 					this.setState({
 						value: e.target.value
 					})
