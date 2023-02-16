@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style/style.css'
-import App from './01-base/21-生命周期-案例2-拦截props'
+import App from './01-base/22-getderivedStateFromProps'
+// import App from './01-base/22-生命周期-销毁'
+// import App from './01-base/21-生命周期-案例2-拦截props'
 // import App from './01-base/20-生命周期-案例-拦截state'
 // import App from './01-base/19-生命周期'
 // import App from './01-base/18-插槽'
