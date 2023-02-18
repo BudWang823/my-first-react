@@ -16,7 +16,7 @@ const reducer = (preState, actions) => {
 }
 const initialArg = {
   count: 0
-}
+} 
 export default function App() {
   const [state, dispatch] = useReducer(reducer, initialArg);
   return (

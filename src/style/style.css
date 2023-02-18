@@ -3,9 +3,16 @@
   padding: 0;
 }
 ul,ol{
-
+  background-color: #fff;
 }
 li {
   list-style: none;
 
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+span{
+  word-break:break-all;
 }

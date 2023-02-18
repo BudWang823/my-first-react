@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style/style.css'
-import App from './02-hooks/10-useReducer-2'
+import App from './03-router/App'
+// import App from './02-hooks/10-useReducer-2'
 // import App from './02-hooks/09-useReducer'
 // import App from './02-hooks/08-useContext'
 // import App from './02-hooks/07-useRef'
