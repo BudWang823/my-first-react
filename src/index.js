@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style/style.css'
-import App from './02-hooks/02-hooks-todoList'
+import App from './02-hooks/04-useEffect-3'
+// import App from './02-hooks/03-useEffect'
+// import App from './02-hooks/02-hooks-todoList'
 // import App from './01-base/24-性能优化'
 // import App from './01-base/23-getSnapshotBeforeUpdate'
 // import App from './01-base/22-生命周期-销毁'
