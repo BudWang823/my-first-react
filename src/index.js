@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style/style.css'
-import App from './02-hooks/05-useCallback'
+import App from './02-hooks/06-useMemo'
+// import App from './02-hooks/05-useCallback'
 // import App from './02-hooks/04-useEffect-3'
 // import App from './02-hooks/03-useEffect'
 // import App from './02-hooks/02-hooks-todoList'
