@@ -12,3 +12,7 @@
     text-align: center;
     line-height: 30px;
 }
+:global(.name){
+    color: purple;
+
+}

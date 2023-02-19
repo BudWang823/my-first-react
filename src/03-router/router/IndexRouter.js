@@ -19,8 +19,8 @@ export default class IndexRouter extends Component {
             <Route path='/films' component={Films} />
             <Route path='/cinemas' component={Cinemas} />
             {/* <Route path='/center' component={Center} /> */}
-            <Route path='/center' render={() => {
-              return isAuth() ? <Center /> : <Redirect to='/login' />
+            <Route path='/center' render={(props) => {
+              return isAuth() ? <Center {...props}/> : <Redirect to='/login' />
             }} />
 
             <Route path='/login' component={Login} />

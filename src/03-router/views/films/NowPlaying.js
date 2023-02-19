@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { Router } from 'react-router-dom'
 import { getNowPlaying } from '../../../api/films';
+import FilmInfo from './FilmInfo';
 
 function useGetNowPlayingList() {
     const [list, setList] = useState([]);
@@ -23,9 +23,10 @@ export default function NowPlaying(props) {
         <div>
             {
                 nowPlaying.map((item, index) => {
-                    return <div key={item.filmId} onClick={() => { handleClick(item) }}>{index + 1}.{item.name}</div>
+                    return <FilmInfo key={item.filmId} info={item}></FilmInfo>
                 })
             }
         </div>
     )
 }
+

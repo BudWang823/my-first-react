@@ -1,6 +1,6 @@
 import React from 'react'
 import { Router, Switch, Route, Redirect } from 'react-router-dom'
-import '../css/films.css'
+import './css/Films.module.css'
 import ComingSoon from './films/ComingSoon'
 import NowPlaying from './films/NowPlaying'
 export default function Films(props) {
