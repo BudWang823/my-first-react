@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getFilmInfo } from '../../../api/films'
+import store from '../../redux/store';
 const useGetFilmInfo = (filmId) => {
     const [filmInfo, setFilmInfo] = useState({});
     const getFilmInfoFn =async ()=> {
@@ -18,19 +19,17 @@ const useGetFilmInfo = (filmId) => {
 
 
 
-
-
-
-
-
-
 export default function Details(props) {
     const filmInfo = useGetFilmInfo(props.match.params.filmId)
     useEffect(() => {
-      console.log('创建')
+      store.dispatch({
+        type: 'hide_tabbar'
+      })
     
       return () => {
-        console.log('销毁')
+        store.dispatch({
+          type: 'show_tabbar'
+        })
       }
     }, []);
   return (
