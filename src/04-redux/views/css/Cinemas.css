@@ -1,0 +1,18 @@
+.Cinemas{
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+.Cinemas .cityName{
+    background-color: red;
+    padding: 5px;
+}
+
+.Cinemas .curCity{
+    font-weight: 600;
+    font-size: 20px;
+}
+.Cinemas .cityLsitul{
+    display: flex;
+    flex-wrap: wrap;
+}

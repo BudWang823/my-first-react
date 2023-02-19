@@ -8,9 +8,8 @@ export default class App extends Component {
   }
   componentDidMount() {
     store.subscribe(() => {
-      console.log(store.getState())
       this.setState({
-        isShowTabbar: store.getState().showTabbar
+        isShowTabbar: store.getState().TabbarReducer.showTabbar
       })
     })
   }
