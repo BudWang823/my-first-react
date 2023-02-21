@@ -16,7 +16,6 @@ export default function CinemasSearch() {
     } 
     return () => {
       // 销毁订阅
-      console.log(unsubcribe)
       unsubcribe()
     }
   }, []);

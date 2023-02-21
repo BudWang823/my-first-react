@@ -23,7 +23,6 @@ export default function Cinemas(props) {
     }
     return () => {
       // 销毁订阅
-      console.log(unsubcribe)
       unsubcribe()
     }
   }, []);
