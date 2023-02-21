@@ -25,8 +25,19 @@ export function getFilmInfo(data = {}) {
 }
 export function getComingList(data = {}) {
     return request({
-        url:'/ajax/comingList?ci=1&limit=10&movieIds=&token=&optimus_uuid=75E4D8B0AFA511EDB73E4FCC90120C086904BD9CD0BA4166ADD32EF20A5DE620&optimus_risk_level=71&optimus_code=10',
+        url: '/ajax/comingList?ci=1&limit=10&movieIds=&token=&optimus_uuid=75E4D8B0AFA511EDB73E4FCC90120C086904BD9CD0BA4166ADD32EF20A5DE620&optimus_risk_level=71&optimus_code=10',
         method: 'get',
         data
+    })
+}
+export function getCinemas(data = {}) {
+    return request({
+        url: "https://m.maizuo.com/gateway?cityId=110100&ticketFlag=1&k=9102410",
+        method: 'get',
+        data,
+        headers: {
+            "X-Host": "mall.film-ticket.cinema.list",
+            "X-Requested-With": "XMLHttpRequest"
+        }
     })
 }

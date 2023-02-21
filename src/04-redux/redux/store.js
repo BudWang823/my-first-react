@@ -1,10 +1,14 @@
-import { combineReducers, createStore } from "redux";
-
+import { applyMiddleware, combineReducers, createStore } from "redux";
+import reduxTrunk from 'redux-thunk'
 import CityReducer from "./reducers/CityReducer";
 import TabbarReducer from "./reducers/TabberReducer";
-const reducer = combineReducers({
+import CinemasReducer from "./reducers/CinemasReducer";
+
+const reducers = combineReducers({
     CityReducer,
-    TabbarReducer
+    TabbarReducer,
+    CinemasReducer,
+    
 })
-const store = createStore(reducer)
+const store = createStore(reducers,applyMiddleware(reduxTrunk))
 export default store
