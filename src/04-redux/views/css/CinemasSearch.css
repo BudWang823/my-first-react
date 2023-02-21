@@ -1,25 +1,25 @@
-.Cinemas{
+.CinemasSearch{
     min-height: 100vh;
     background-color: #000;
     color: #fff;
 }
-.Cinemas .searchBox{
+.CinemasSearch .searchBox{
 
 }
-.Cinemas .cityName{
+.CinemasSearch .cityName{
     background-color: red;
     padding: 5px;
 }
 
-.Cinemas .curCity{
+.CinemasSearch .curCity{
     font-weight: 600;
     font-size: 20px;
 }
-.Cinemas .cityLsitul{
+.CinemasSearch .cityLsitul{
     display: flex;
     flex-wrap: wrap;
 }
-.Cinemas .search{
+.CinemasSearch .search{
 
     background-color: yellow;
     padding: 5px;

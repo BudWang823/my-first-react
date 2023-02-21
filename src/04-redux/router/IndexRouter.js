@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom'
 import Films from '../views/Films'
 import Cinemas from '../views/Cinemas'
+import CinemasSearch from '../views/CinemasSearch'
 import Center from '../views/Center'
 import NotFound from '../views/NotFound'
 import Details from '../views/details/Details'
@@ -18,7 +19,8 @@ export default class IndexRouter extends Component {
           {this.props.children}
           <Switch>
             <Route path='/films' component={Films} />
-            <Route path='/cinemas' component={Cinemas} />
+            <Route path='/cinemas' component={Cinemas} exact/>
+            <Route path='/cinemas/search' component={CinemasSearch} exact/>
             {/* <Route path='/center' component={Center} /> */}
             <Route path='/center' render={(props) => {
               return isAuth() ? <Center {...props}/> : <Redirect to='/login' />

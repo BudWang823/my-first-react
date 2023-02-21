@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, {useState, useEffect, useMemo } from 'react'
+import { useHideTabbar } from '../mixin/hideTabbar';
 import getCinemasAction from '../redux/actionCreator/CinemasActionCreator';
 import store from '../redux/store';
-import './css/Cinemas.css'
-
-
-
-
-
-
-
-
-
-export default function Cinemas(props) {
-  const {cityName} = store.getState().CityReducer
+import './css/CinemasSearch.css'
+export default function CinemasSearch() {
+  // useHideTabbar()
+  const [inputValue, setInputValue] = useState('');
   const [cinemasList, setCinemasList] = useState(store.getState().CinemasReducer.list);
   useEffect(() => {
     const unsubcribe = store.subscribe(() => {
@@ -20,25 +13,26 @@ export default function Cinemas(props) {
     })
     if(store.getState().CinemasReducer.list.length === 0) {
       store.dispatch(getCinemasAction())
-    }
+    } 
     return () => {
       // 销毁订阅
       console.log(unsubcribe)
       unsubcribe()
     }
   }, []);
+  const searchList = useMemo(() => {
+    return cinemasList.filter(item => item.name.toUpperCase().includes(inputValue.toUpperCase()))
+  }, [inputValue, cinemasList]);
+
   return (
-    <div className='Cinemas'>
-      <div className='cityName' onClick={() => {
-        props.history.push('/city')
-      }}>{cityName}</div>
-      <div className='search' onClick={() => {
-        props.history.push('/cinemas/search')
-      }}>搜索</div>
+    <div className='CinemasSearch'>
+      <div className='searchBox'>
+        <input type="text" value={inputValue} onChange={e => setInputValue(e.target.value)}/>
+      </div>
       <div>
         <ul>
           {
-            cinemasList.map(item => {
+            searchList.map(item => {
               return <li className="cinemas" key={item.cinemaId}>{item.name}</li>
             })
           }
