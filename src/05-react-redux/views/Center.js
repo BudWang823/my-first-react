@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Center(props) {
+ function Center(props) {
   return (
     <div>
       center
@@ -10,3 +10,6 @@ export default function Center(props) {
     </div>
   )
 }
+
+
+export default Center
