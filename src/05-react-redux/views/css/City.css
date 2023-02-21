@@ -1,0 +1,25 @@
+.City {
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+
+.City .curCity {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.City .cityLsitul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.City .cityLsitLi {
+    width: 15vw;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2.5vw;
+    border: 1px solid #fff;
+}

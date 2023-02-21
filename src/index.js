@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style/style.css'
-import App from './04-redux/App'
+import App from './05-react-redux/App'
+import { Provider } from 'react-redux';
+import store from './05-react-redux/redux/store';
 // import App from './03-router/App'
 // import App from './02-hooks/10-useReducer-2'
 // import App from './02-hooks/09-useReducer'
@@ -40,9 +42,9 @@ import App from './04-redux/App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-	// <React.StrictMode>
-	<App/>
-	// </React.StrictMode>
+	<Provider store={store}>
+		<App />
+	</Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
